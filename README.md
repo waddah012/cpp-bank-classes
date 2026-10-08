@@ -1,33 +1,16 @@
-# Banking Classes
+# Bank classes
 
-Customer, Account, Transaction, and Bank classes with deposits, withdrawals, and transaction history.
+This is a small banking project I wrote in C++. I split it into Customer, Account, Transaction, and Bank classes so each part has its own job.
 
-An educational C++ example developed from coursework, organized as a standalone project.
+The example creates an account, deposits 500, and withdraws 200. It then tries to withdraw another 400, which gets rejected because there is not enough money left. At the end, it prints the account details and transactions.
 
-## Build and run
+The balance uses a double, and the amount checks are still basic.
 
-Requires a C++17 compiler and Make. Smoke checks also require Python 3.
+To build and run it, you need a C++17 compiler and Make. Open a terminal in this folder and run:
 
 ```sh
 make
 make run
-make check
 ```
 
-To choose a compiler: `make CXX=clang++` or `make CXX=g++`. Run `make clean` to remove build outputs.
-
-## Example
-
-A console demonstration of object-oriented composition. The sample account starts at zero, deposits 500, withdraws 200, and rejects a withdrawal of 400.
-
-## Structure
-
-- `src/`: source code and headers.
-- `tests/smoke.py`: representative console checks with execution timeouts.
-- `Makefile`: builds the source files together into `build/example`.
-
-## Scope
-
-Amounts use floating-point numbers and the original exercise has limited input validation.
-
-The source retains the original exercise logic and explanatory comments. Build outputs, submission documents, and course materials are not part of this repository.
+You can also run `make check` to check the sample output. That needs Python 3. Use `make clean` if you want to remove the compiled program.
